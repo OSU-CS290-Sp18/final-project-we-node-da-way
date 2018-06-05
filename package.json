@@ -1,0 +1,26 @@
+{
+  "name": "final-project-we-node-da-way",
+  "version": "1.0.0",
+  "description": "Holds stuff for Meme Storefront",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSU-CS290-Sp18/final-project-we-node-da-way.git"
+  },
+  "author": "Douglas Wilson, Alex Liechty, Simon Louie, Jeff Deng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OSU-CS290-Sp18/final-project-we-node-da-way/issues"
+  },
+  "homepage": "https://github.com/OSU-CS290-Sp18/final-project-we-node-da-way#readme"
+}
