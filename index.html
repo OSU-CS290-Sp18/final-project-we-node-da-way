@@ -1,33 +1,49 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-	<title>Memazon</title>
-	<link rel="styelsheet" href = "style.css">
+
+	<title>memazon</title>
+
+	<link rel = "stylesheet" href = "style.css">
+
+	<!-- This script incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
+    <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" defer></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 </head>
+
 <body>
 
 	<header>
-		<a href = "#"><h1><i class = "site_title">Memazon</i></h1></a>
-
 		<nav class = "navbar">
-		<ul class = "navlist">
+			<ul class = "nav_list">
 
-			<li class = "navitem links" id = "products"><a href="#">Products</a></li>
+				<li class = "nav">
+					<a href = "#" class = "nav_link"><h1 id = "site_title">memazon</h1></a>
+				</li>
 
-			<li class="navitem links" id = "cart"><a href="#">Cart</a></li>
+				<li class = "nav">
+					<a href = "#" class = "nav_link">Products</a>
+				</li>
 
-			<li class = "navitem search">
-				<input type ="text" id = "search_bar_input" placeholder="Search items">
-				<button type="button" id="search_bar_button"></button></li>
+				<li class = "nav" id = "nav_search">
+					<input type = "text" id = "search_box">
+					<button type = "button" id = "search_button"><i class = "fas fa-search"></i></button>
+				</li>
 
+				<li class = "nav" id = "nav_cart">
+						<a href = "#" class = "nav_link">Cart <i class = "fas fa-shopping-cart"></i></a>
+				</li>
 
-		</ul>
+			</ul>
 		</nav>
-
 	</header>
 
-	<main class = "container">
+	<main>
 		<article class = "product_item">
+
 			<div class = "product image">
 				<img src = "#">
 			</div>
@@ -35,7 +51,7 @@
 			<div class = "product price">
 				<p class = "pricing">$420.00</p>
 			</div>
-		
+
 		</article>
 	</main>
 
