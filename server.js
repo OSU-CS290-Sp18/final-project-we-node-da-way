@@ -18,7 +18,6 @@ app.get('/', function( req,res,next){
 	res.status(200).sendFile(index.html);
 });
 
-//Need a 404 page
 app.get('*', function(req, res, next){
 	res.status(404).render('404');
 })
