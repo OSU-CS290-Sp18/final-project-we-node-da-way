@@ -48,7 +48,7 @@ nav {
 .nav_list {
 
 	display: flex;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	align-items: center;
 
 	height: 100%;
@@ -91,6 +91,7 @@ nav {
 #nav_cart {
 
 	padding-right: 0;
+	float: right;
 
 }
 
@@ -104,7 +105,7 @@ nav {
 #search_box {
 
 	height: 20px;
-	width: 740px;
+	width: 320px;
 
 	border: 1px solid white;
 	border-radius: 5px;
