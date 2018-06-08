@@ -56,7 +56,7 @@ app.get('/about', function(req, res, next){
 	res.status(200).render('about');
 });
 
-app.get('/contact', function(req res, next){
+app.get('/contact', function(req, res, next){
 	res.status(200).render('about');
 });
 
