@@ -1,0 +1,229 @@
+html {
+	
+	font-family: Roboto, sans-serif;
+	
+}
+
+
+body {
+	
+	background-color: hsl(0, 0%, 90%);
+	
+}
+
+
+header {
+	
+	display: block;
+	height: 75px;
+	width: 100%;
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	background-color: rgb(111, 124, 145);
+	
+}
+
+
+nav {
+	
+	display: block;
+	height: 100%;
+	
+	position: relative;
+	
+	font-weight: normal;
+	font-size: 15pt;
+	
+	padding: 0 12.5%;
+	
+}
+
+.nav_list {
+	
+	display: block;
+	height: 100%;
+	
+	margin: 0;
+	padding: 0;
+	
+}
+
+.nav {
+	
+	display: inline-block;
+	
+	position: relative;
+	bottom: 2px;
+	
+	padding-right: 3.91vw;
+	
+}
+
+.nav_link {
+	
+	text-decoration: none;
+	color: white;
+	
+}
+
+#site_title {
+	
+	font-weight: bold;
+	font-size: 20pt;
+	
+}
+
+#nav_search {
+
+	width: 31.25vw;
+
+	bottom: 4px;
+	
+	padding-right: 0;
+	
+}
+
+#nav_cart {
+	
+	float: right;
+	
+	top: 33%;
+	
+	padding-right: 0;
+	
+}
+
+#search_box {
+	
+	width: 75%;
+	
+	border: 1px solid white;
+	border-radius: 5px;
+	
+	background-color: rgba(0, 0, 0, 0);
+	
+	font-family: Roboto, sans-serif;
+	color: white;
+	
+	padding: 5px;
+	
+}
+
+#search_box:focus {
+	
+	outline: none;
+	
+	background-color: rgba(0, 0, 0, 0.1);
+	
+}
+
+#search_button {
+	
+	height: 30px;
+	width: 30px;
+	
+	position: relative;
+	top: 2px;
+	
+	background-color: rgba(0, 0, 0, 0);
+	border: 0px;
+	
+	font-size: 15pt;
+	color: white;
+	
+}
+
+#search_button:hover {
+	
+	cursor: pointer;
+	
+}
+
+#search_button:focus {
+	
+	outline: none;
+	
+}
+
+
+main {
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	width: 75%;
+	
+	position: relative;
+	top: 75px;
+	
+	margin: auto;
+	padding: 50px;
+	
+}
+
+
+.product_item {
+	
+	display: block;
+	height: 12.5vw;
+	width: 12.5vw;
+	
+	position: relative;
+	
+	border: 1px dashed red;
+	
+	margin: 0 20px;
+	margin-bottom: 40px;
+	
+}
+
+.product_image {
+	
+	display: block;
+	width: 100%;
+	
+	border-radius: 5%;
+	
+	margin: auto;
+	
+}
+
+.product_price {
+
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	
+	color: white;
+	background-color: rgb(111, 124, 145);
+	
+	margin: 0;
+	padding: 0 0.5em;
+	
+}
+
+
+.error_container {
+	
+	display: block;
+	
+	text-align: center;
+	
+}
+
+.error_container h2 {
+	
+	font-size: 20pt;
+	
+}
+
+.error_container h3 {
+	
+	font-size: 15pt;
+	
+}
+
