@@ -3,6 +3,7 @@ var path = require('path');
 var express = require('express');
 var express_handlebars = require('express-handlebars');
 var handlebars = require('handlebars');
+var bodyParser = require('body-parser');
 var mongoClient = require('mongodb').MongoClient;
 
 var testData = require('./testData');
@@ -10,13 +11,17 @@ var testData = require('./testData');
 var app = express();
 var port = process.env.PORT || 3000;
 
-var mongoHost = process.env.MONGO_HOST;
+var mongoHost = process.env.MONGO_HOST || "classmongo.engr.oregonstate.edu";
 var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.env.MONGO_USER;
+var mongoUser = process.env.MONGO_USER || cs290_liechtya;
 var mongoPassword = process.env.MONGO_PASSWORD;
-var mongoDBName = process.env.MONGO_DB;
+var mongoDBName = process.env.MONGO_DB || cs290_liechtya
 
 var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword + '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
+
+var mongoDB = NULL;
+
+app.use(bodyParser.json());
 
 var options = {
 
@@ -52,6 +57,31 @@ app.get('/index', function(req, res, next) {
 
 });
 
+app.get('/cart', function(req, res, next){
+	var cart = mongoDB.collection('cart');
+	cart.find().toArray(function(err, cartDoc){
+		if (err) {
+			res.status(500).send("Error fetching cart from DB");
+		} else {
+			res.status(200).render('cart', cartDoc);
+		}
+	});
+	
+});
+
+app.post('/addCart' function(req, res, next){
+	var meme = {
+		memeURL: req.body.memeURL,
+		price: req.body.price
+	};
+	var MemeCollection = mongoDB.collection('memes');
+	var cart = mongoDB.collection('cart');
+});
+
+app.post('/checkout/checkout' function(req, res, next){
+
+});
+
 app.get('/about', function(req, res, next){
 	res.status(200).render('about');
 });
@@ -71,8 +101,12 @@ app.get('*', function(req, res, next) {
 	res.render('404');
 })
 
-app.listen(port, function() {
-
-	console.log("This memeingful server is running on port", port);
-
-});
+mongoClient.connect(mongoURL, function(err, client){
+	if (err) {
+		throw err;
+	}
+	mongoDB = client.db(mongoDBName);
+	app.listen(port, function() {
+		console.log("This memeingful server is running on port", port);
+	});
+})
