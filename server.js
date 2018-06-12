@@ -57,7 +57,7 @@ app.get('/about', function(req, res, next){
 });
 
 app.get('/contact', function(req, res, next){
-	res.status(200).render('about');
+	res.status(200).render('contact');
 });
 
 app.get('/mission', function(req, res, next){
