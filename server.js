@@ -14,13 +14,13 @@ var port = process.env.PORT || 3000;
 
 var mongoHost = process.env.MONGO_HOST || "classmongo.engr.oregonstate.edu";
 var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.env.MONGO_USER || cs290_liechtya;
-var mongoPassword = process.env.MONGO_PASSWORD || cs290_liechtya;
-var mongoDBName = process.env.MONGO_DB || cs290_liechtya
+var mongoUser = process.env.MONGO_USER || "cs290_liechtya";
+var mongoPassword = process.env.MONGO_PASSWORD || "cs290_liechtya";
+var mongoDBName = process.env.MONGO_DB || "cs290_liechtya";
 
 var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword + '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
 
-var mongoDB = NULL;
+var mongoDB = null;
 
 app.use(bodyParser.json());
 
@@ -71,7 +71,7 @@ app.get('/cart', function(req, res, next){
 	});
 });
 
-app.post('/addCart' function(req, res, next){
+app.post('/addCart', function(req, res, next){
 	var meme = {
 		memeName: req.body.memeName,
 		memeURL: req.body.memeURL,
@@ -94,10 +94,11 @@ app.post('/addCart' function(req, res, next){
 
 });
 
-app.post('/checkout/checkingout' function(req, res, next){
+app.post('/checkout/checkingout', function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
 	order.insertOne(
+	
 		{	Name: req.body.name,
 			Address: req.body.address,
 			City: req.body.city,
@@ -108,7 +109,9 @@ app.post('/checkout/checkingout' function(req, res, next){
 				res.status(500).send("Error sending ")
 			}
 		}
-});
+	);
+})
+	
 
 
 app.get('/about', function(req, res, next){
