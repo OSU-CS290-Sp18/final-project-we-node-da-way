@@ -14,7 +14,7 @@ var port = process.env.PORT || 3000;
 var mongoHost = process.env.MONGO_HOST || "classmongo.engr.oregonstate.edu";
 var mongoPort = process.env.MONGO_PORT || 27017;
 var mongoUser = process.env.MONGO_USER || cs290_liechtya;
-var mongoPassword = process.env.MONGO_PASSWORD;
+var mongoPassword = process.env.MONGO_PASSWORD || cs290_liechtya;
 var mongoDBName = process.env.MONGO_DB || cs290_liechtya
 
 var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword + '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
@@ -77,7 +77,7 @@ app.post('/addCart' function(req, res, next){
 	var MemeCollection = mongoDB.collection('memes');
 	var cart = mongoDB.collection('cart');
 
-	cart.addOne(
+	cart.insertOne(
 		{ memeName: memeName,
 		  memeURL: memeURL,
 		  price: price,
@@ -94,7 +94,7 @@ app.post('/addCart' function(req, res, next){
 app.post('/checkout/checkingout' function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
-	order.addOne(
+	order.insertOne(
 		{	Name: req.body.name,
 			Address: req.body.address,
 			City: req.body.city,
