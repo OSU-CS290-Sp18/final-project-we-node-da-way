@@ -102,6 +102,8 @@ app.post('/addCart', function(req, res, next){
 		function(err, result) {
 			if(err) {
 				res.status(500).send("Error inserting item in cart");
+			} else {
+				res.status(200).end();
 			}
 		}
 	)
@@ -113,15 +115,22 @@ app.post('/checkout/checkingout', function(req, res, next){
 	var cart = mongoDB.collection('cart');
 	order.insertOne(
 
-		{	Name: req.body.name,
+		{	firstName: req.body.firstname,
+			lastName: req.body.lastName,
 			Address: req.body.address,
-			City: req.body.city,
+			State: req.body.state,
+			Country: req.body.country,
 			Phone: req.body.phone,
-			items: cart.find().toArray()
+			items: cart.find().toArray(),
+			Method: req.body.method,
+			CardNum: req.body.cardNum
 		}, function(err, result) {
 			if(err){
-				res.status(500).send("Error sending ")
+				res.status(500).send("Error sending ");
+			} else {
+				res.status(200).render('Thanks');
 			}
+
 		});
 });
 
