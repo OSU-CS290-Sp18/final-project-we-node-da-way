@@ -66,7 +66,6 @@ app.get('/cart', function(req, res, next){
 			res.status(200).render('cart', cartDoc);
 		}
 	});
-	
 });
 
 app.post('/addCart' function(req, res, next){
@@ -76,11 +75,25 @@ app.post('/addCart' function(req, res, next){
 	};
 	var MemeCollection = mongoDB.collection('memes');
 	var cart = mongoDB.collection('cart');
+
+	cart.addOne(
+		{ memeURL: memeURL,
+		  price: price},
+		function(err, result) {
+			if(err) {
+				res.status(500).send("error inserting item in cart");
+			} else {
+				res.status(200).end();
+			}
+		}
+	)
 });
 
 app.post('/checkout/checkout' function(req, res, next){
 
 });
+
+app.get('/')
 
 app.get('/about', function(req, res, next){
 	res.status(200).render('about');
