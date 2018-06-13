@@ -6,6 +6,7 @@ var handlebars = require('handlebars');
 var mongoClient = require('mongodb').MongoClient;
 
 var testData = require('./testData');
+var meme = require('./meme');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -35,7 +36,8 @@ app.get('/', function(req, res, next) {
 	res.status(200);
 	res.render('index', {
 
-		products: testData
+		// products: testData
+		products: meme
 
 	});
 
@@ -46,7 +48,8 @@ app.get('/index', function(req, res, next) {
 	res.status(200);
 	res.render('index', {
 
-		products: testData
+		// products: testData
+		products: meme
 
 	});
 

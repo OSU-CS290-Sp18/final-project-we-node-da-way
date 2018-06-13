@@ -2,69 +2,79 @@
 	"Econ": {
 		"name": "Meme Economy",
 		"photo": "Meme_Economy.jpg",
+		"memeURL": "/Meme_Economy.jpg",
 		"price": "$1337.00",
 		"description": "Get it while its hot! This is a premade meme. You will not be able to make an modifications to it, but its price has been reduced!"
 	},
 
 	"Propane":{
 		"name":"Ascended Past Propane",
-		"photo": "Ascended_Past_Propane.png",
+		"photo": "/Ascended_Past_Propane.png",
+		"memeURL": "/Ascended_Past_Propane.png",
 		"price": "1 gallon of Propane",
 		"description": "A meme that originated from VR chat, and one that can't be modified. This meme describes the struggle of Hank Hill, a member of the Akatsuki trying to become god by ascending past all known sources of energy!"
 	},
 
 	"F":{
 		"name":"Press F To Pay Respects",
-		"photo": "Ascended_Past_Propane.jpg",
+		"photo": "/PressF.jpg",
+		"memeURL": "/PressF.jpg",
 		"price": "$9000.01",
 		"description": "This meme can be have text added to it to modify its contents! Anything you want to pay respects too, can be added. We will even throw in a free F key to simulate pushing the button."
 	},
 
 	"Rick":{
 		"name": "Rick Roll",
-		"photo": "RickRoll.jpg",
+		"photo": "/RickRoll.jpg",
+		"memeURL": "/RickRoll.jpg",
 		"price": "0.01",
 		"description": "A classic, this meme can be yours for only $0.01! Add it to the back of a shirt to fool your friends."
 	},
 
 	"Greed":{
 		"name": "Greedy Milk",
-		"photo": "Greedy_Milk.jpg",
+		"photo": "/Greedy_Milk.jpg",
+		"memeURL": "/Greedy_Milk.jpg",
 		"price": "2000 platinum",
 		"description": "The favored drink made from those with platinum to spare, send in any drinking contatiner to get it branded as a bottle of Greedy Milk, note it does not come with Grakatas."
 	},
 
 	"9000":{
 		"name":"It's Over 9000",
-		"photo": "itsover1000.jpg",
+		"photo": "/itsover1000.jpg",
+		"memeURL": "/itsover1000.jpg",
 		"price": "Evidence that your Power Level is over 9000",
 		"description": "Show everyone how tough you are with this trophy."
 	},
 
 	"Money":{
 		"name": "Take My Money",
-		"photo": "takemymoney.jpg",
-		"price": "NeinNeinNeinNeinNeinNeinNeinNeinNein",
+		"photo": "/takemymoney.jpg",
+		"memeURL": "/takemymoney.jpg",
+		"price": "69696969",
 		"description": "You probably can't afford this, but on the off chance that you can, go ahead and show everyone how rich you are Mr. Moneybags!"
 	},
 
 	"ChairForce":{
 		"name": "Ugandan AirForce Tiger Mafia",
-		"photo": "Ugandan_AirForce.jpg",
+		"photo": "/Ugandan_AirForce.jpg",
+		"memeURL": "/Ugandan_AirForce.jpg",
 		"price": "133962264150 Ugandan Shillings",
 		"description": "Become the legendary Tiger Mafia Ugandan Airforce pilot yourself! You just need to be able to afford his helicopter."
 	},
 
 	"Captain":{
 		"name": "Captain America Lecture",
-		"photo": "Captain_Chair.jpg",
+		"photo": "/Captain_Chair.jpeg",
+		"memeURL": "/Captain_Chair.jpeg",
 		"price": "1 kilo of Vibranium",
 		"description": "Behold as Captain America tells others what to do! When ordering this product, make sure to add what you want him to say!"
 	},
 
 	"Arrow":{
 		"name": "An Arrow to the Knee",
-		"photo": "Arrow_to_Knee.jpg",
+		"photo": "/Arrow_to_Knee.jpg",
+		"memeURL": "/Arrow_to_Knee.jpg",
 		"price": "1 Dragon Soul",
 		"description": "Show everyone that you were once an ex-adventurer with this product."
 	}
