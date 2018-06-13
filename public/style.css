@@ -202,6 +202,24 @@ main {
 	
 }
 
+main h2 {
+	
+	font-size: 20pt;
+	
+	margin: 0.5em 0;
+	padding: 0;
+	
+}
+
+main p {
+	
+	font-size: 15pt;
+	
+	margin: 0.5em 0;
+	padding: 0;
+	
+}
+
 
 .product_item {
 	
@@ -249,7 +267,7 @@ main {
 }
 
 
-.error_container {
+.generic_container {
 	
 	display: block;
 	
@@ -257,15 +275,6 @@ main {
 	
 }
 
-.error_container h2 {
-	
-	font-size: 20pt;
-	
-}
 
-.error_container h3 {
-	
-	font-size: 15pt;
-	
-}
+
 
