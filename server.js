@@ -20,11 +20,7 @@ var mongoDBName = process.env.MONGO_DB || "cs290_liechtya";
 
 var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword + '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
 
-<<<<<<< HEAD
-var mongoDB;
-=======
 var mongoDB = null;
->>>>>>> 329eec4fee0abc4c5d117a5863c9e0407d982ca1
 
 app.use(bodyParser.json());
 
@@ -80,11 +76,7 @@ app.get('/cart', function(req, res, next){
 	});
 });
 
-<<<<<<< HEAD
-app.post('/addToCart', function(req, res, next){
-=======
 app.post('/addCart', function(req, res, next){
->>>>>>> 329eec4fee0abc4c5d117a5863c9e0407d982ca1
 	var meme = {
 		memeName: req.body.memeName,
 		memeURL: req.body.memeURL,
@@ -112,7 +104,7 @@ app.post('/checkout/checkingout', function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
 	order.insertOne(
-	
+
 		{	Name: req.body.name,
 			Address: req.body.address,
 			City: req.body.city,
@@ -122,15 +114,8 @@ app.post('/checkout/checkingout', function(req, res, next){
 			if(err){
 				res.status(500).send("Error sending ")
 			}
-<<<<<<< HEAD
 		});
 });
-=======
-		}
-	);
-})
-	
->>>>>>> 329eec4fee0abc4c5d117a5863c9e0407d982ca1
 
 
 app.get('/about', function(req, res, next){
