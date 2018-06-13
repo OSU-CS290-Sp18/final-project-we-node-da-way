@@ -1,0 +1,26 @@
+<div id="item_modal_backdrop" class="hidden"></div>
+    <div id="item_modal_create" class="hidden">
+      <div class="modal_dialog">
+
+        <div class="modal_header">
+          
+          <button type="button" class="modal_close_button">&times;</button>
+          <p>hi</p>
+        </div>
+
+        <div class="modal_body">
+          <div class="item_image_input">
+            <img class = "item_image" src = {{> memeURL}}>
+          </div>
+
+          <div class="item_image_description">
+            <p>Product description</p>
+            <p><b>${{> price}}</b></p>
+          </div>
+        </div>
+
+        <div class="modal_remove_item">
+          <button type="button" class="modal_remove_item_button">Remove Item</button>
+        </div>
+
+      </div>
