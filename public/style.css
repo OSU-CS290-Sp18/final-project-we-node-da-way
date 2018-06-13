@@ -246,6 +246,53 @@ main p {
 	
 }
 
+#item_modal_backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#item_modal_create {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9100;
+  overflow: scroll;
+}
+
+
+.modal_dialog {
+  width: auto;
+/*  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;*/
+  width: 550px;
+  height: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.modal_close_button {
+  position: absolute;
+  right: 10px;
+  top: auto;
+  font-size: 30px;
+  border: none;
+  background: none;
+  /*padding: 0;*/
+  cursor: pointer;
+}
+
+.hidden{
+	display: none;
+}
+
 .product_image:hover {
 	
 	opacity: 0.75;
