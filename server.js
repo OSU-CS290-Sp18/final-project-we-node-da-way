@@ -107,7 +107,6 @@ app.post('/checkout/checkingout' function(req, res, next){
 		}
 });
 
-app.get('/')
 
 app.get('/about', function(req, res, next){
 	res.status(200).render('about');
@@ -123,7 +122,6 @@ app.get('/mission', function(req, res, next){
 
 
 app.get('*', function(req, res, next) {
-
 	res.status(404);
 	res.render('404');
 })
