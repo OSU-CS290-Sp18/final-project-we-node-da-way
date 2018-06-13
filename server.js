@@ -70,6 +70,7 @@ app.get('/cart', function(req, res, next){
 
 app.post('/addCart' function(req, res, next){
 	var meme = {
+		memeName: req.body.memeName,
 		memeURL: req.body.memeURL,
 		price: req.body.price
 	};
@@ -77,20 +78,33 @@ app.post('/addCart' function(req, res, next){
 	var cart = mongoDB.collection('cart');
 
 	cart.addOne(
-		{ memeURL: memeURL,
-		  price: price},
+		{ memeName: memeName,
+		  memeURL: memeURL,
+		  price: price,
+	  	  quantity: 1},
 		function(err, result) {
 			if(err) {
-				res.status(500).send("error inserting item in cart");
-			} else {
-				res.status(200).end();
+				res.status(500).send("Error inserting item in cart");
 			}
 		}
 	)
+
 });
 
-app.post('/checkout/checkout' function(req, res, next){
-
+app.post('/checkout/checkingout' function(req, res, next){
+	var order = mongoDB.collection('order');
+	var cart = mongoDB.collection('cart');
+	order.addOne(
+		{	Name: req.body.name,
+			Address: req.body.address,
+			City: req.body.city,
+			Phone: req.body.phone,
+			items: cart.find().toArray()
+		}, function(err, result) {
+			if(err){
+				res.status(500).send("Error sending ")
+			}
+		}
 });
 
 app.get('/')
