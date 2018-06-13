@@ -7,20 +7,20 @@ var bodyParser = require('body-parser');
 var mongoClient = require('mongodb').MongoClient;
 
 var testData = require('./testData');
-var meme = require('./meme');
+//var meme = require('./meme');
 
 var app = express();
 var port = process.env.PORT || 3000;
 
 var mongoHost = process.env.MONGO_HOST || "classmongo.engr.oregonstate.edu";
 var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.env.MONGO_USER || cs290_liechtya;
-var mongoPassword = process.env.MONGO_PASSWORD || cs290_liechtya;
-var mongoDBName = process.env.MONGO_DB || cs290_liechtya
+var mongoUser = process.env.MONGO_USER || "cs290_liechtya";
+var mongoPassword = process.env.MONGO_PASSWORD || "cs290_liechtya";
+var mongoDBName = process.env.MONGO_DB || "cs290_liechtya";
 
 var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword + '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
 
-var mongoDB = NULL;
+var mongoDB;
 
 app.use(bodyParser.json());
 
@@ -49,15 +49,20 @@ app.get('/', function(req, res, next) {
 });
 
 app.get('/index', function(req, res, next) {
+	var memes = mongoDB.collection('memes');
+	memes.find().toArray(function(err, memeDoc){
+		if (err) {
+			res.status(500).send("Error fetching memes");
+		} else {
+			res.status(200);
+			res.render('index', {
 
-	res.status(200);
-	res.render('index', {
+				// products: testData
+				products: memeDoc[0]
 
-		// products: testData
-		products: meme
-
-	});
-
+			});
+		}
+	})
 });
 
 app.get('/cart', function(req, res, next){
@@ -71,11 +76,12 @@ app.get('/cart', function(req, res, next){
 	});
 });
 
-app.post('/addCart' function(req, res, next){
+app.post('/addToCart', function(req, res, next){
 	var meme = {
 		memeName: req.body.memeName,
 		memeURL: req.body.memeURL,
-		price: req.body.price
+		price: req.body.price,
+		description: req.body.description
 	};
 	var MemeCollection = mongoDB.collection('memes');
 	var cart = mongoDB.collection('cart');
@@ -94,7 +100,7 @@ app.post('/addCart' function(req, res, next){
 
 });
 
-app.post('/checkout/checkingout' function(req, res, next){
+app.post('/checkout/checkingout', function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
 	order.insertOne(
@@ -107,7 +113,7 @@ app.post('/checkout/checkingout' function(req, res, next){
 			if(err){
 				res.status(500).send("Error sending ")
 			}
-		}
+		});
 });
 
 
