@@ -38,13 +38,20 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res, next) {
 
-	res.status(200);
-	res.render('index', {
+	var memes = mongoDB.collection('memes');
+	memes.find().toArray(function(err, memeDoc){
+		if (err) {
+			res.status(500).send("Error fetching memes");
+		} else {
+			res.status(200);
+			res.render('index', {
 
-		// products: testData
-		products: meme
+				// products: testData
+				products: memeDoc[0]
 
-	});
+			});
+		}
+	})
 
 });
 
