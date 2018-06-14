@@ -226,6 +226,9 @@ main p {
 	display: block;
 	height: 12.5vw;
 	width: 12.5vw;
+	
+	min-height: 200px;
+	min-width: 200px;
 
 	position: relative;
 

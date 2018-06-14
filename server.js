@@ -124,7 +124,7 @@ app.post('/removefromCart', function(req, res, next){
 	});
 })
 
-app.get('/checkout/checkingout', function(req, res, next){
+app.get('/Thanks', function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
 	order.insertOne(
