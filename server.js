@@ -39,11 +39,11 @@ app.set('view engine', 'handlebars');
 app.get('/', function(req, res, next) {
 
 	var memes = mongoDB.collection('memes');
-	memes.find().toArray(function(err, memeDoc){
+	memes.find({}, {fields: {_id: 0}}).toArray(function(err, memeDoc){
 		if (err) {
 			res.status(500).send("Error fetching memes");
 		} else {
-			console.log(memeDoc[1]);
+			console.log(memeDoc[0]);
 			res.status(200);
 			res.render('index', {
 
@@ -162,3 +162,10 @@ mongoClient.connect(mongoURL, function(err, client){
 		console.log("This memeingful server is running on port", port);
 	});
 })
+
+handlebars.registerHelper('for', function(context, block) {
+    var accum = '';
+    for(var i = 1; i < context.length ; i ++)
+        accum += block.fn(context[i]);
+    return accum;
+});
