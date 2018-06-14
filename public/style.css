@@ -500,7 +500,6 @@ main p {
 
 }
 
-
 .modal_dialog {
 	
 	width: 550px;
@@ -529,7 +528,6 @@ main p {
 	padding: 0;
 	
 }
-
 
 .modal_close_button {
 	
@@ -569,6 +567,23 @@ main p {
 }
 
 
+.modal_add_item_button {
+	
+	border: none;
+	border-radius: 5px;
+	
+    background-color: rgb(111, 124, 145);
+	
+	font-weight: bold;
+	font-size: 10pt;
+	color: white;
+	
+	padding: 5px;
+	
+}
+
+
+
 .foot{
 
     display: inline-block;
@@ -589,25 +604,19 @@ main p {
 }
 
 .alert {
+	
 	display: inline-block;
 	justify-content: center;
 	background-color: rgb(255, 252, 107);
 	border: 2px;
 	border-color: rgb(255, 250, 0);
+	
 }
 
 #alert_close {
+	
 	position: absolute;
 	right: 0;
-}
-
-
-.item_image{
-
-	width: 20em;
-	height:20em;
-	
-	margin: auto;
 	
 }
 
