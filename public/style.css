@@ -317,7 +317,7 @@ main p {
 
 
 .generic_container {
-
+/*
 <<<<<<< HEAD
 /* Stuff for the cart page*/
 
@@ -457,13 +457,6 @@ input{
 	}
 
 
-
-
-
-
-
-
-
 .footbar {
     position: fixed;
     left: 0;
@@ -478,13 +471,13 @@ input{
     margin-left: 3em;
     margin-right: 3em;
 }
-
+/*
 =======
 	display: block;
 >>>>>>> df96261d100ed928b439849a1762f564fb8bd67a
 
 	text-align: center;
-
+*/
 
 .always_hidden {
 	display: none;
