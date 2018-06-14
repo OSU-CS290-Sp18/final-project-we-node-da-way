@@ -23,6 +23,37 @@ function handleRemoveFromCart(event) {
 	request.send(requestBody);
 }
 
+var addButton = document.getElementsByClassName('modal_add_item_button')[0];
+addButton.addEventListener('click', function handleAddToCart(event) {
+	var memeName = event.target.getElementsByClassName('meme_name')[0];
+	var memeURL = event.target.getElementsByClassName("product_image")[0].getAttribute("src");
+	var description = event.target.getElementsByClassName('description')[0];
+	var price =event.target.getElementsByClassName('product_price')[0] ;
+
+	var request = new XMLHttpRequest();
+	var url = "/addCart";
+	request.open("POST", url);
+	var requestBody = JSON.stringify({
+   		memeName: memeName,
+   		memeURL: memeURL,
+		description: description,
+		price: price
+ 	});
+
+	request.addEventListener('load', function(event) {
+		if(event.target.status === 200){
+			console.log("Go Beavs");
+
+		} else {
+			console.log("(╯°□°)╯︵ ┻━┻");
+		}
+	});
+
+	request.setRequestHeader('Content-Type', 'application/json');
+	request.send(requestBody);
+}
+)
+
 function handleAddToCart(event) {
 	var memeName = event.target.getElementsByClassName('meme_name')[0];
 	var memeURL = event.target.getElementsByClassName("product_image")[0].getAttribute("src");
