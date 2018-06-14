@@ -475,63 +475,101 @@ main p {
 }
 
 
-
-
-
-
-
-
-
 .item_modal_backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9000;
-  background-color: rgba(0, 0, 0, 0.85);
+	
+	  position: fixed;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  
+	  z-index: 9000;
+	  
+	  background-color: rgba(0, 0, 0, 0.85);
+	  
 }
 
 .item_modal_create {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9010;
-  overflow: scroll;
-	border: 1px solid white;
-	border-radius: 5px;
-
-
+	
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	z-index: 9001;
+	
+	overflow: hidden:
 }
 
 
 .modal_dialog {
-	width: auto;
+	
 	width: 550px;
 	height: 600px;
 	margin: 40px auto;
-	background-color: #fff;
+	background-color: hsl(0, 0%, 90%);
 	border-radius: 10px;
-	padding: 10px 20px
+	padding: 20px 20px;
+	
+	text-align: center;
+	
 }
 
 .modal_header{
+	
 	position: relative;
+	
+}
+
+.modal_header h4 {
+	
+	font-size: 20pt;
+	
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	
 }
 
 
 .modal_close_button {
-  position: absolute;
-  right: -3px;
-  top: -17px;
-  font-size: 30px;
-  border: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
+	
+	  position: absolute;
+	  right: -5px;
+	  top: -20px;
+	  
+	  border: none;
+	  
+	  background: none;
+	  
+	  padding: 0;
+	  
+	  font-size: 20pt;
+	  
+	  cursor: pointer;
 
 }
+
+.item_image_input {
+	
+	margin: auto;
+	margin-bottom: 25px;
+	
+}
+
+.item_image{
+	
+	display: block;
+	width: 15vw;
+	height: 15vw;
+	
+	position: relative;
+	
+	margin: auto;
+	
+}
+
 
 .foot{
 
@@ -565,10 +603,6 @@ main p {
 	right: 0;
 }
 
-.item_image{
-	width: 20em;
-	height:20em;
-}
 
 .hidden {
 
