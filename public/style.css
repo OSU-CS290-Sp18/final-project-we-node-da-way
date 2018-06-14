@@ -261,31 +261,33 @@ main p {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9100;
+  z-index: 9010;
   overflow: scroll;
 }
 
 
 .modal_dialog {
   width: auto;
-/*  max-width: 600px;
-  min-width: 350px;
-  min-height: 300px;*/
   width: 550px;
   height: 600px;
   margin: 40px auto;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
+  padding: 10px 20px
 }
 
-.modal_close_button {
+.modal_header{
+	position: relative;
+}
+
+#modal_close_button {
   position: absolute;
-  right: 10px;
-  top: auto;
+  right: -3px;
+  top: -17px;
   font-size: 30px;
   border: none;
   background: none;
-  /*padding: 0;*/
+  padding: 0;
   cursor: pointer;
 }
 
