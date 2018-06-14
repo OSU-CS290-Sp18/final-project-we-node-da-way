@@ -499,8 +499,7 @@ main p {
   right: 0;
   z-index: 9010;
   overflow: scroll;
-	border: 1px solid white;
-	border-radius: 5px;
+
 
 
 }
@@ -566,14 +565,9 @@ main p {
 }
 
 .item_image{
-<<<<<<< HEAD
-	
-	width:100px;
-	height: :100px;
-=======
+
 	width: 20em;
 	height:20em;
->>>>>>> f4bc7d912235ca76fb92f3bce1db7aff47e705b4
 }
 
 .hidden {
