@@ -538,19 +538,6 @@ input{
 
 }
 
-
-.hidden {
-
-	display: none;
-
-}
-
-.always_hidden {
-
-	display: none;
-
-}
-
 .alert {
 	display: inline-block;
 	justify-content: center;
@@ -562,4 +549,16 @@ input{
 #alert_close {
 	position: absolute;
 	right: 0;
+}
+
+.hidden {
+
+	display: none;
+
+}
+
+.always_hidden {
+
+	display: none;
+
 }
