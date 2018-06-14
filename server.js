@@ -48,7 +48,7 @@ app.get('/', function(req, res, next) {
 			res.render('index', {
 
 				// products: testData
-				products: memeDoc[1]
+				products: memeDoc[0]
 
 			});
 		}
@@ -66,7 +66,7 @@ app.get('/index', function(req, res, next) {
 			res.render('index', {
 
 				// products: testData
-				products: memeDoc[1]
+				products: memeDoc[0]
 
 			});
 		}
