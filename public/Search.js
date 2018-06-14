@@ -1,11 +1,14 @@
 var searchBox = document.getElementById("search_box");
-console.log(searchBox);
+//console.log(searchBox);
 function searchFunction(memes, input) {
-	var name = memes.querySelector('.meme_name')
-	if ((name.textContent.search(input) == -1) && !memes.classList.contains('hidden')) {
+	var name = memes.querySelector('.product_name')
+	var searchInput = input.toLowerCase()
+	var searchText = name.textContent.toLowerCase()
+	
+	if ((searchText.search(searchInput) == -1) && !memes.classList.contains('hidden')) {
 		memes.classList.add('hidden');
 	}
-	if (name.textContent.search(input) != -1) {
+	else if (searchText.search(searchInput) != -1) {
 		//console.log(name.textContent.search(input));
 		memes.classList.remove('hidden');
 	}

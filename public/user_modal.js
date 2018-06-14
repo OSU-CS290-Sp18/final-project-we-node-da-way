@@ -41,35 +41,3 @@ function item_click(element){
 	// var x = checkURL(imageURL);
 }
 
-
-
-
-
-
-
-// function Create_Modal(){
-// 	product_container.addEventListener("click", function(event){
-
-
-// 		if(event.target.className === "product_image") {
-
-// 				var path = this.item_image.src;
-// 				alert(this.item_image.name);
-// 				Create_Modal_Backdrop.classList.remove('hidden');
-// 				Modal_Window.classList.remove('hidden');
-
-// 		}
-// 	});
-// }
-
-
-
-
-
-
-
-
-// checkURL(imageURL);
-// Create_Modal();
-// item_click(element);
-// Close_Modal();

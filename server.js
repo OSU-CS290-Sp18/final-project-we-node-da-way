@@ -43,7 +43,6 @@ app.get('/', function(req, res, next) {
 		if (err) {
 			res.status(500).send("Error fetching memes");
 		} else {
-			console.log(memeDoc[0]);
 			res.status(200);
 			res.render('index', {
 
@@ -79,7 +78,7 @@ app.get('/cart', function(req, res, next){
 		if (err) {
 			res.status(500).send("Error fetching cart from DB");
 		} else {
-			res.status(200).render('cart', cartDoc);
+			res.status(200).render('cart', { cart_items: cartDoc});
 		}
 	});
 });
@@ -101,7 +100,7 @@ app.post('/addCart', function(req, res, next){
 	cart.insertOne(
 		{ memeName: memeName,
 		  memeURL: memeURL,
-		  description: drscription,
+		  description: description,
 		  price: price,
 	  	  quantity: 1},
 		function(err, result) {
@@ -115,7 +114,7 @@ app.post('/addCart', function(req, res, next){
 
 });
 
-app.post('/removeFromCart', function(req, res, next){
+app.post('/cart/removeFromCart', function(req, res, next){
 	var cart = mongoDB.collection('cart');
 	cart.remove({name: req.body.name}, function(err){
 		if (err) {
@@ -130,7 +129,7 @@ app.get('/Thanks', function(req, res, next){
 	order.insertOne(
 
 		{	firstName: req.body.firstname,
-			lastName: req.body.lastName,
+			lastName: req.body.lastname,
 			Address: req.body.address,
 			Country: req.body.country,
 			State: req.body.state,
@@ -141,6 +140,7 @@ app.get('/Thanks', function(req, res, next){
 			CardNum: req.body.cardNum,
 			Expiration: req.body.expire
 		}, function(err, result) {
+			console.log(req.body.state);
 			if(err){
 				res.status(500).send("Error sending your order");
 			} else {
