@@ -73,17 +73,17 @@ app.get('/index', function(req, res, next) {
 });
 
 app.get('/search-`:keyword', function(req, res, next){
-	
+
 	var memes = mongoDB.collection('memes');
-	
+
 	memes.find().toArray(function(err, memeDoc){
-		
+
 		if (err) {
-			
+
 			res.status(500).send("Error fetching memes");
-			
+
 		} else {
-			
+
 			res.status(200);
 			res.render('index', {
 
@@ -92,7 +92,7 @@ app.get('/search-`:keyword', function(req, res, next){
 			});
 		}
 	})
-	
+
 })
 
 app.get('/cart', function(req, res, next){
@@ -116,7 +116,8 @@ app.get('/:memeName/:memeURL/:memeDesc/:memePrice', function(req, res, next) {
 		memeName: req.params.memeName,
 		memeURL: "/" + req.params.memeURL,
 		price: req.params.memePrice,
-		description: req.param.memeDesc
+		description: req.param.memeDesc,
+		quantity: 1
 	};
 	console.log(req.params.memeName);
 	console.log(req.params.memeDesc);
