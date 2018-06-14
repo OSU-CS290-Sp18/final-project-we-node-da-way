@@ -324,6 +324,165 @@ main p {
 	
 }
 
+/* Stuff for the cart page*/
+
+.pricebar{
+    display: flex;
+  height: 3em;
+  align-items: center;
+
+}
+
+.price_list{
+    display: flex;
+    margin: 2px;
+    padding: 20px;
+}
+
+.price{
+    display: flex;
+    justify-content: space-around;
+    margin: 10em;
+    
+    
+}
+
+.price.list1{
+    margin-right: 20em;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.meme_cart_container{
+    height: 9em;
+
+    
+}
+.meme_article{
+    margin-bottom: -10em;
+}
+
+.meme_icon{ 
+  margin-right: 45em;
+}
+.meme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.meme_pic{
+    width: 10em;
+    height: 10em;
+}
+
+.meme_price{
+    display: flex;
+    position: relative;
+    left: 6em;
+    bottom: 11em;
+}
+.meme_quant{
+    display: flex;
+    position: relative;
+    top: -13.75em;
+    left: 29em
+
+}
+.meme_icon{
+    display: flex;
+    position: relative;
+    right: 5em;
+}
+
+.product_information{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: -7em;
+    left: 10em;
+}
+    
+ul{
+  list-style-type: none;
+}
+
+.checkout_container{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    top: 5em;
+}
+
+.Payment_Method{
+    flex-direction: row;
+    position: absolute;
+    left: 10em;
+    
+}
+
+.Billing{
+    position: absolute;
+    flex-direction: row;
+    right: 10em;
+   
+}
+
+.Buttons{
+    position: absolute;
+    top: 30em;
+
+}
+
+button{
+    background-color: rgb(111, 124, 145);
+    color: white;
+    width: 100%;
+    	border-radius: 5px;
+
+    
+
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+
+
+input{
+
+	border: 1px solid white;
+	border-radius: 5px;
+   
+	}
+
+
+
+
+
+
+
+
+
+.footbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(111, 124, 145);
+}
+
+.foot{
+    display: inline-block;
+    margin-left: 3em;
+    margin-right: 3em;
+}
 
 
 
