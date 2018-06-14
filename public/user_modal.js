@@ -13,10 +13,7 @@ function item_click(element){
 
 
 
-<<<<<<< HEAD
 		if(event.target.className === "product_item") {
-=======
->>>>>>> d1682c709fa543f06a614c55d46b7dfdc982f5a9
 
 // function Create_Modal(){
 // 	product_container.addEventListener("click", function(event){
