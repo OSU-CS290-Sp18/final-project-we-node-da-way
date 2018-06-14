@@ -425,8 +425,7 @@ main p {
 	
 	background-color: rgb(111, 124, 145);
     color: white;
-    margin: auto;
-	margin-top: 25px;
+
     position: relative;
 	
 	border: none;
@@ -435,6 +434,9 @@ main p {
 	font-size: 10pt;
 	font-weight: bold;
 	
+	argin: auto;
+	margin-top: 25px;
+	margin-bottom: 50px;
 	padding: 5px;
 	
 }
