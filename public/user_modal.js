@@ -5,13 +5,12 @@ var Modal_Close = document.getElementById("modal_close_button")
 
 
 
-
 function Create_Modal(){
 	product_container.addEventListener("click", function(event){
-		
+
 
 		if(event.target.className === "product_image") {
-			
+
 			// for(var i =0; i <= Create_Modal_Backdrop.length; i++){
 				console.log("1+1");
 				Create_Modal_Backdrop.classList.remove('hidden');
