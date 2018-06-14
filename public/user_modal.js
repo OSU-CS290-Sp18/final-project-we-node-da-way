@@ -9,10 +9,10 @@ var item_modal = handlebars.compile('item_modal');
 
 function Create_Modal(){
 	product_container.addEventListener("click", function(event){
-		memeURL = event.target.getElementsByClassName("")
-		name =
-		description =
-		price =
+		memeURL = event.target.getElementById("product_image").getAttribute("src");
+		name = event.target.getElementsByClassName("always_hidden")[0].value;
+		description = event.target.getElementsByClassName("always_hidden")[1].value;
+		price = event.target.getElementsByClassName("product_price")[0].value;
 
 		if(event.target.className === "product_item") {
 				var context = {
