@@ -38,13 +38,21 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res, next) {
 
-	res.status(200);
-	res.render('index', {
+	var memes = mongoDB.collection('memes');
+	memes.find({}, {fields: {_id: 0}}).toArray(function(err, memeDoc){
+		if (err) {
+			res.status(500).send("Error fetching memes");
+		} else {
+			console.log(memeDoc[0]);
+			res.status(200);
+			res.render('index', {
 
-		// products: testData
-		products: meme
+				// products: testData
+				products: memeDoc[0]
 
-	});
+			});
+		}
+	})
 
 });
 
@@ -89,32 +97,58 @@ app.post('/addCart', function(req, res, next){
 	cart.insertOne(
 		{ memeName: memeName,
 		  memeURL: memeURL,
+		  description: drscription,
 		  price: price,
 	  	  quantity: 1},
 		function(err, result) {
 			if(err) {
 				res.status(500).send("Error inserting item in cart");
+			} else {
+				res.status(200).end();
 			}
 		}
 	)
 
 });
 
-app.post('/checkout/checkingout', function(req, res, next){
+app.post('/removefromCart', function(req, res, next){
+	var cart = mongoDB.collection('cart');
+	cart.remove({name: req.body.name}, function(err){
+		if (err) {
+			alert("Something happened with MongoDB. Can not remove meme from cart");
+		}
+	});
+})
+
+app.get('/checkout/checkingout', function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
 	order.insertOne(
 
-		{	Name: req.body.name,
+		{	firstName: req.body.firstname,
+			lastName: req.body.lastName,
 			Address: req.body.address,
-			City: req.body.city,
+			Country: req.body.country,
+			State: req.body.state,
+			Zip: req.body.zip,
 			Phone: req.body.phone,
-			items: cart.find().toArray()
+			items: cart.find().toArray(),
+			Method: req.body.method,
+			CardNum: req.body.cardNum,
+			Expiration: req.body.expire
 		}, function(err, result) {
 			if(err){
-				res.status(500).send("Error sending ")
+				res.status(500).send("Error sending your order");
+			} else {
+				cart.remove({});
+				res.status(200).render('Thanks');
 			}
+
 		});
+});
+
+app.post('/addMeme', function(req, res, next){
+
 });
 
 
@@ -145,3 +179,10 @@ mongoClient.connect(mongoURL, function(err, client){
 		console.log("This memeingful server is running on port", port);
 	});
 })
+
+handlebars.registerHelper('for', function(context, block) {
+    var accum = '';
+    for(var i = 1; i < context.length ; i ++)
+        accum += block.fn(context[i]);
+    return accum;
+});

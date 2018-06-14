@@ -275,6 +275,7 @@ main p {
 
 
 /* Stuff for the cart page*/
+<<<<<<< HEAD
 
 .cart_container{
 	
@@ -404,4 +405,80 @@ main p {
     margin-right: 3em;
 	
 }
+=======
 
+
+>>>>>>> origin/master
+
+.checkout_container{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    top: 5em;
+}
+
+.Payment_Method{
+    flex-direction: row;
+    position: absolute;
+    left: 10em;
+    
+}
+
+.Billing{
+    position: absolute;
+    flex-direction: row;
+    right: 10em;
+   
+}
+
+.Buttons{
+    position: absolute;
+    top: 30em;
+
+}
+
+button{
+    background-color: rgb(111, 124, 145);
+    color: white;
+    width: 100%;
+    	border-radius: 5px;
+
+    
+
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+
+
+input{
+
+	border: 1px solid white;
+	border-radius: 5px;
+   
+	}
+
+
+.footbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(111, 124, 145);
+}
+
+.foot{
+    display: inline-block;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.always_hidden {
+	display: none;
+}
