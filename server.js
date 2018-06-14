@@ -97,6 +97,7 @@ app.post('/addCart', function(req, res, next){
 	cart.insertOne(
 		{ memeName: memeName,
 		  memeURL: memeURL,
+		  description: drscription,
 		  price: price,
 	  	  quantity: 1},
 		function(err, result) {
@@ -110,7 +111,16 @@ app.post('/addCart', function(req, res, next){
 
 });
 
-app.post('/checkout/checkingout', function(req, res, next){
+app.post('/removefromCart', function(req, res, next){
+	var cart = mongoDB.collection('cart');
+	cart.remove({name: req.body.name}, function(err){
+		if (err) {
+			alert("Something happened with MongoDB. Can not remove meme from cart");
+		}
+	});
+})
+
+app.get('/checkout/checkingout', function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
 	order.insertOne(
@@ -118,20 +128,27 @@ app.post('/checkout/checkingout', function(req, res, next){
 		{	firstName: req.body.firstname,
 			lastName: req.body.lastName,
 			Address: req.body.address,
-			State: req.body.state,
 			Country: req.body.country,
+			State: req.body.state,
+			Zip: req.body.zip,
 			Phone: req.body.phone,
 			items: cart.find().toArray(),
 			Method: req.body.method,
-			CardNum: req.body.cardNum
+			CardNum: req.body.cardNum,
+			Expiration: req.body.expire
 		}, function(err, result) {
 			if(err){
-				res.status(500).send("Error sending ");
+				res.status(500).send("Error sending your order");
 			} else {
+				cart.remove({});
 				res.status(200).render('Thanks');
 			}
 
 		});
+});
+
+app.post('/addMeme', function(req, res, next){
+
 });
 
 
