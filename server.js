@@ -116,7 +116,7 @@ app.get('/:memeName/:memeURL/:memeDesc/:memePrice', function(req, res, next) {
 		memeName: req.params.memeName,
 		memeURL: "/" + req.params.memeURL,
 		price: req.params.memePrice,
-		description: req.param.memeDesc,
+		description: req.params.memeDesc,
 		quantity: 1
 	};
 	console.log(req.params.memeName);
