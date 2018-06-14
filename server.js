@@ -118,12 +118,14 @@ app.post('/checkout/checkingout', function(req, res, next){
 		{	firstName: req.body.firstname,
 			lastName: req.body.lastName,
 			Address: req.body.address,
-			State: req.body.state,
 			Country: req.body.country,
+			State: req.body.state,
+			Zip: req.body.zip,
 			Phone: req.body.phone,
 			items: cart.find().toArray(),
 			Method: req.body.method,
-			CardNum: req.body.cardNum
+			CardNum: req.body.cardNum,
+			Expiration: req.body.expire
 		}, function(err, result) {
 			if(err){
 				res.status(500).send("Error sending ");
@@ -132,6 +134,10 @@ app.post('/checkout/checkingout', function(req, res, next){
 			}
 
 		});
+});
+
+app.post('/addMeme', function(req, res, next){
+
 });
 
 
