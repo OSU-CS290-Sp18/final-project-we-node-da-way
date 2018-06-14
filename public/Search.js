@@ -1,7 +1,7 @@
 var searchBox = document.getElementById("search_box");
 //console.log(searchBox);
 function searchFunction(memes, input) {
-	var name = memes.querySelector('.meme_name')
+	var name = memes.querySelector('.product_name')
 	if ((name.textContent.search(input) == -1) && !memes.classList.contains('hidden')) {
 		memes.classList.add('hidden');
 	}
