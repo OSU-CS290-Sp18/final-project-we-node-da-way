@@ -9,7 +9,7 @@ function Create_Modal(){
 	product_container.addEventListener("click", function(event){
 
 
-		if(event.target.className === "product_image") {
+		if(event.target.className === "product_item") {
 
 			// for(var i =0; i <= Create_Modal_Backdrop.length; i++){
 				console.log("1+1");

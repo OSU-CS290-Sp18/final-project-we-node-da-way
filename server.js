@@ -100,7 +100,7 @@ app.post('/addCart', function(req, res, next){
 	cart.insertOne(
 		{ memeName: memeName,
 		  memeURL: memeURL,
-		  description: drscription,
+		  description: description,
 		  price: price,
 	  	  quantity: 1},
 		function(err, result) {
@@ -114,7 +114,7 @@ app.post('/addCart', function(req, res, next){
 
 });
 
-app.post('/removeFromCart', function(req, res, next){
+app.post('/cart/removeFromCart', function(req, res, next){
 	var cart = mongoDB.collection('cart');
 	cart.remove({name: req.body.name}, function(err){
 		if (err) {
