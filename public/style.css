@@ -111,9 +111,13 @@ nav {
 #nav_search {
 
 	width: 31.25vw;
+<<<<<<< HEAD
+	
+=======
 
 
 
+>>>>>>> 0499d140226eed54f189fffaa25c4730996dab21
 	margin: 15px 0;
 	padding-right: 0;
 
@@ -176,8 +180,8 @@ nav {
 	opacity: 0.75;
 
 }
+	
 
-}
 
 #search_button:focus {
 
@@ -276,100 +280,125 @@ main p {
 }
 
 
-/* Stuff for the cart page*/
-
-.pricebar{
-    display: flex;
-  height: 3em;
-  align-items: center;
+.cart_container{
+	
+	flex-direction: column;
+	flex-wrap: nowrap;
 
 }
 
-.price_list{
-    display: flex;
-    margin: 2px;
-    padding: 20px;
+.cart_headers {
+	
+	display: flex;
+	align-items: center;
+	
+	height: 45px;
+	
+	list-style-type: none;
+	
+	margin: auto;
+	margin-bottom: 1em;
+	
+	padding: 0;
+	
 }
 
-.price{
-    display: flex;
-    justify-content: space-around;
-    margin: 10em;
-
+.cart_headers li {
+	
+	display: inline-block;
 
 }
 
-.price.list1{
-    margin-right: 20em;
-    font-weight: 700;
-    white-space: nowrap;
+.big_header {
+	
+	width: 120px;
+	
+	font-size: 20pt;
+	
+	padding: 0 25px;
+	
+} 
+
+.filler_header {
+	
+	width: 30vw;
+
+	padding-right: 25px;
+	
+} 
+
+.small_header {
+	
+	width: 7.8125vw;
+	
+	font-size: 15pt;
+	
+	padding-right: 25px;
+	
+} 
+
+.cart_item {
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	
+	height: 150px;
+
+	position: relative;
+	
+	border: 1px solid;
+	border-color: rgb(200, 200, 200);
+	border-radius: 25px;
+	
+	margin: auto;
+	margin-bottom: 10px;
+	
 }
 
-.meme_cart_container{
-    height: 9em;
-
-
-}
-.meme_article{
-    margin-bottom: -10em;
-}
-
-.meme_icon{
-  margin-right: 45em;
-}
-.meme{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
+.cart_item_image {
+	
+	display: block;
+	height: 120px;
+	width: 120px;
+	
+	margin: 0 25px;
 }
 
-.meme_pic{
-    width: 10em;
-    height: 10em;
+.item_info {
+	
+	display: block;
+	width: 30vw;
+	
+	padding-right: 25px;
+	
 }
 
-.meme_price{
-    display: flex;
-    position: relative;
-    left: 6em;
-    bottom: 11em;
-}
-.meme_quant{
-    display: flex;
-    position: relative;
-    top: -13.75em;
-    left: 29em
-
-}
-.meme_icon{
-    display: flex;
-    position: relative;
-    right: 5em;
+.item_price, .item_quantity {
+	
+	display: block;
+	width: 7.8125vw;
+	
+	position: relative;
+	
+	padding-right: 25px;
 }
 
-.product_information{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    top: -7em;
-    left: 10em;
-}
-
-ul{
-  list-style-type: none;
-}
 
 .checkout_container{
+	
     display: flex;
     position: absolute;
     flex-direction: column;
     align-content: center;
     align-items: center;
     top: 5em;
+	
 }
 
 .Payment_Method{
+	
     flex-direction: row;
     position: absolute;
     left: 10em;
@@ -377,62 +406,74 @@ ul{
 }
 
 .Billing{
+	
     position: absolute;
     flex-direction: row;
     right: 10em;
+	
 
 }
 
 .Buttons{
+	
     position: absolute;
     top: 30em;
+	
 
 }
 
 button{
+	
     background-color: rgb(111, 124, 145);
     color: white;
     width: 100%;
-    	border-radius: 5px;
-
-
-
+	border-radius: 5px;
+	
 }
 
 button:hover{
+	
     cursor: pointer;
     opacity: 0.75;
+	
 }
-
-
 
 input{
 
 	border: 1px solid white;
 	border-radius: 5px;
 
-	}
+}
 
 
 .footbar {
+	
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     background-color: rgb(111, 124, 145);
+	
 }
 
 .foot{
+	
     display: inline-block;
     margin-left: 3em;
     margin-right: 3em;
+	
 }
 
+
 .hidden {
+	
 	display: none;
+	
 }
 
 .always_hidden {
+	
 	display: none;
+	
 }
