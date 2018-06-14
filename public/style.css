@@ -538,6 +538,26 @@ input{
 
 }
 
+.alert {
+	position: fixed;
+	display: inline-block;
+	justify-content: center;
+	background-color: rgb(255, 252, 107);
+	border: 5px;
+	border-color: rgb(173, 170, 0);
+	max-width: 500px;
+	bottom: 50px;
+}
+
+#alert_close {
+
+	right: 0;
+	padding-left: 5px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+}
 
 .hidden {
 
@@ -549,17 +569,4 @@ input{
 
 	display: none;
 
-}
-
-.alert {
-	display: inline-block;
-	justify-content: center;
-	background-color: rgb(255, 252, 107);
-	border: 2px;
-	border-color: rgb(255, 250, 0);
-}
-
-#alert_close {
-	position: absolute;
-	right: 0;
 }

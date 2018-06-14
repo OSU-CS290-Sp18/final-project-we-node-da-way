@@ -126,20 +126,20 @@ app.post('/cart/removeFromCart', function(req, res, next){
 app.get('/Thanks', function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
-	order.insertOne(
-
-		{	firstName: req.body.firstname,
-			lastName: req.body.lastname,
-			Address: req.body.address,
-			Country: req.body.country,
-			State: req.body.state,
-			Zip: req.body.zip,
-			Phone: req.body.phone,
-			items: cart.find().toArray(),
-			Method: req.body.method,
-			CardNum: req.body.cardNum,
-			Expiration: req.body.expire
-		}, function(err, result) {
+	console.log(req.body);
+	var context = {	firstName: req.body.firstname,
+		lastName: req.body.lastname,
+		Address: req.body.address,
+		Country: req.body.country,
+		State: req.body.state,
+		Zip: req.body.zip,
+		Phone: req.body.phone,
+		items: cart.find().toArray(),
+		Method: req.body.method,
+		CardNum: req.body.cardNum,
+		Expiration: req.body.expire
+	}
+	order.insertOne(context, function(err, result) {
 			console.log(req.body.state);
 			if(err){
 				res.status(500).send("Error sending your order");
@@ -150,6 +150,8 @@ app.get('/Thanks', function(req, res, next){
 
 		});
 });
+
+
 
 app.post('/addMeme', function(req, res, next){
 
