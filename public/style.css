@@ -1,122 +1,122 @@
 img {
-	
+
 	max-width: 100%;
 	max-height: 100%;
-	
+
 	object-fit: cover;
-	
+
 }
 
 html {
-	
+
 	font-family: Roboto, sans-serif;
-	
+
 }
 
 body {
-	
+
 	background-color: hsl(0, 0%, 90%);
-	
+
 }
 
 header {
-	
+
 	display: block;
 	height: 75px;
 	width: 100%;
-	
+
 	position: absolute;
 	left: 0;
 	top: 0;
-	
+
 	background-color: rgb(111, 124, 145);
-	
+
 }
 
 
 nav {
-	
+
 	display: block;
 	height: 100%;
-	
+
 	position: relative;
 	bottom: 1px;
-	
+
 	font-weight: normal;
 	font-size: 15pt;
-	
+
 	padding: 0 12.5%;
-	
+
 }
 
 .nav_list {
-	
+
 	display: flex;
 	align-items: center;
-	
+
 	height: 100%;
 	width: 100%;
-	
+
 	position: relative;
-	
+
 	margin: 0;
 	padding: 0;
-	
+
 }
 
 .nav {
-	
+
 	display: inline-block;
-	
+
 	position: relative;
-	
+
 	padding-right: 3.91vw;
-	
+
 }
 
 .nav_link {
-	
+
 	display: block;
-	
+
 	text-decoration: none;
 	color: white;
-	
+
 }
 
 .nav_link:hover {
-	
+
 	opacity: 0.75;
-	
+
 }
 
 #site_title {
 
 	position: relative;
 	bottom: 2px;
-	
+
 	font-weight: bold;
 	font-size: 20pt;
-	
+
 	margin: 0;
 	padding: 0;
-	
+
 	/* just the Amazon logo color, uncomment if needed
-	
+
 	color: #ff9900;
-	
+
 	*/
-	
+
 }
 
 #nav_search {
-	
-	width: 31.25vw;
-	
 
-	
+	width: 31.25vw;
+
+
+
 	margin: 15px 0;
 	padding-right: 0;
-	
+
 }
 
 #nav_cart {
@@ -124,126 +124,126 @@ nav {
 	position: absolute;
 	right: 0;
 	bottom: auto;
-		
+
 	padding-right: 0;
-	
+
 }
 
 #search_box {
-	
+
 	width: 75%;
-	
+
 	border: 1px solid white;
 	border-radius: 5px;
-	
+
 	background-color: rgba(0, 0, 0, 0);
-	
+
 	font-family: Roboto, sans-serif;
 	color: white;
-	
+
 	padding: 5px;
-	
+
 }
 
 #search_box:focus {
-	
+
 	outline: none;
-	
+
 	background-color: rgba(0, 0, 0, 0.1);
-	
+
 }
 
 #search_button {
-	
+
 	height: 30px;
 	width: 40px;
-	
+
 	position: relative;
 	top: 2px;
-	
+
 	background-color: rgba(0, 0, 0, 0);
 	border: 0px;
-	
+
 	font-size: 15pt;
 	color: white;
-	
+
 }
 
 #search_button:hover {
-	
+
 	cursor: pointer;
-	
+
 	opacity: 0.75;
-	
+
 }
-	
+
 }
 
 #search_button:focus {
-	
+
 	outline: none;
-	
+
 }
 
 
 main {
-	
+
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 
 	width: 75%;
-	
+
 	position: relative;
 	top: 75px;
-	
+
 	margin: auto;
 	padding: 50px;
-	
+
 }
 
 main h2 {
-	
+
 	font-size: 20pt;
-	
+
 	margin: 0.5em 0;
 	padding: 0;
-	
+
 }
 
 main p {
-	
+
 	font-size: 15pt;
-	
+
 	margin: 0.5em 0;
 	padding: 0;
-	
+
 }
 
 
 .product_item {
-	
+
 	display: block;
 	height: 12.5vw;
 	width: 12.5vw;
-	
+
 	position: relative;
-	
+
 	margin: 0 20px;
 	margin-bottom: 40px;
-	
+
 }
 
 .product_image {
-	
+
 	display: block;
 	width: 100%;
 	height: 100%;
-	
+
 	border-radius: 10%;
-	
+
 	margin: auto;
-	
+
 }
 
 #item_modal_backdrop {
@@ -296,9 +296,9 @@ main p {
 }
 
 .product_image:hover {
-	
+
 	opacity: 0.75;
-	
+
 }
 
 .product_price {
@@ -306,24 +306,24 @@ main p {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	
+
 	color: white;
 	background-color: rgb(111, 124, 145);
-	
+
 	margin: 0;
 	padding: 0 0.5em;
-	
+
 }
 
 
 .generic_container {
-	
+
 	display: block;
-	
+
 	text-align: center;
-	
+
 }
 
-
-
-
+.always_hidden {
+	display: none;
+}
