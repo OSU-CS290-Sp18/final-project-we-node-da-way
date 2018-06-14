@@ -73,17 +73,17 @@ app.get('/index', function(req, res, next) {
 });
 
 app.get('/search-`:keyword', function(req, res, next){
-	
+
 	var memes = mongoDB.collection('memes');
-	
+
 	memes.find().toArray(function(err, memeDoc){
-		
+
 		if (err) {
-			
+
 			res.status(500).send("Error fetching memes");
-			
+
 		} else {
-			
+
 			res.status(200);
 			res.render('index', {
 
@@ -92,7 +92,7 @@ app.get('/search-`:keyword', function(req, res, next){
 			});
 		}
 	})
-	
+
 })
 
 app.get('/cart', function(req, res, next){
@@ -109,6 +109,33 @@ app.get('/cart', function(req, res, next){
 app.get('/checkout', function(req, res, next){
 	res.status(200).render('checkout');
 })
+
+app.get('/:memeName/:memeURL/:memeDesc/:memePrice', function(req, res, next) {
+	console.log(req.url);
+	var meme = {
+		memeName: req.params.memeName,
+		memeURL: "/" + req.params.memeURL,
+		price: req.params.memePrice,
+		description: req.param.memeDesc,
+		quantity: 1
+	};
+	console.log(req.params.memeName);
+	console.log(req.params.memeDesc);
+	var MemeCollection = mongoDB.collection('memes');
+	var cart = mongoDB.collection('cart');
+
+	cart.insertOne(meme,
+		function(err, result) {
+			if(err) {
+				res.status(500).send("Error inserting item in cart");
+			} else {
+				console.log("Success");
+				res.redirect('/');
+			};
+		}
+	)
+
+});
 
 app.post('/addCart', function(req, res, next){
 	var meme = {
@@ -139,7 +166,7 @@ app.post('/addCart', function(req, res, next){
 
 app.post('/cart/removeFromCart', function(req, res, next){
 	var cart = mongoDB.collection('cart');
-	cart.remove({name: req.body.name}, function(err){
+	cart.removeOne({name: req.body.name}, function(err){
 		if (err) {
 			alert("Something happened with MongoDB. Can not remove meme from cart");
 		}
