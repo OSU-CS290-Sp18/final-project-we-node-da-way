@@ -238,19 +238,19 @@ main p {
 }
 
 .product_name {
-	
+
 	display: block;
 	width: 100%;
-	
+
 	position: absolute;
 	left: 0;
 	top: 0;
-	
+
 	color: white;
 	background-color: rgb(111, 124, 145);
 
 	text-align: center;
-	
+
 	margin: auto;
 	padding: 0;
 
@@ -474,17 +474,6 @@ input{
 }
 
 
-<<<<<<< HEAD
-.footbar {
-
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: rgb(111, 124, 145);
-
-=======
 .modal_dialog {
 	width: auto;
 	width: 550px;
@@ -493,7 +482,6 @@ input{
 	background-color: #fff;
 	border-radius: 10px;
 	padding: 10px 20px
->>>>>>> master
 }
 
 .modal_header{
@@ -540,14 +528,14 @@ input{
 }
 
 .footbar {
-	
+
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     background-color: rgb(111, 124, 145);
-	
+
 }
 
 
