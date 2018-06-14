@@ -21,6 +21,9 @@ function Create_Modal(){
 					description: description,
 					price: price
 				}
+				var item_modal_template = handlebars.templates.item_modal;
+				var modalHTML = item_modal_template(context);
+				
 			// for(var i =0; i <= Create_Modal_Backdrop.length; i++){
 				console.log("1+1");
 				Create_Modal_Backdrop.classList.remove('hidden');
