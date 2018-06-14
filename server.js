@@ -87,6 +87,32 @@ app.get('/checkout', function(req, res, next){
 	res.status(200).render('checkout');
 })
 
+app.get('/:memeName/:memeURL/:memeDesc/:memePrice', function(req, res, next) {
+	console.log(req.url);
+	var meme = {
+		memeName: req.params.memeName,
+		memeURL: "/" + req.params.memeURL,
+		price: req.params.memePrice,
+		description: req.param.memeDesc
+	};
+	console.log(req.params.memeName);
+	console.log(req.params.memeDesc);
+	var MemeCollection = mongoDB.collection('memes');
+	var cart = mongoDB.collection('cart');
+
+	cart.insertOne(meme,
+		function(err, result) {
+			if(err) {
+				res.status(500).send("Error inserting item in cart");
+			} else {
+				console.log("Success");
+				res.redirect('/');
+			};
+		}
+	)
+
+});
+
 app.post('/addCart', function(req, res, next){
 	var meme = {
 		memeName: req.body.memeName,
