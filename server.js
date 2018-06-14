@@ -166,7 +166,7 @@ app.post('/addCart', function(req, res, next){
 
 app.post('/cart/removeFromCart', function(req, res, next){
 	var cart = mongoDB.collection('cart');
-	cart.remove({name: req.body.name}, function(err){
+	cart.removeOne({name: req.body.name}, function(err){
 		if (err) {
 			alert("Something happened with MongoDB. Can not remove meme from cart");
 		}
