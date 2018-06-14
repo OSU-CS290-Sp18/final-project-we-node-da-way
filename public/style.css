@@ -455,14 +455,12 @@ button:hover{
 }
 
 
-
 input{
 
 	border: 1px solid white;
 	border-radius: 5px;
    
 	}
-
 
 .footbar {
     position: fixed;
