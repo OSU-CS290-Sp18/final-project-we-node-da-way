@@ -78,7 +78,7 @@ app.get('/cart', function(req, res, next){
 		if (err) {
 			res.status(500).send("Error fetching cart from DB");
 		} else {
-			res.status(200).render('cart', cartDoc);
+			res.status(200).render('cart', { cart_items: cartDoc});
 		}
 	});
 });
