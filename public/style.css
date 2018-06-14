@@ -566,8 +566,8 @@ main p {
 }
 
 .item_image{
-	width:100px;
-	height: :100px;
+	width: 20em;
+	height:20em;
 }
 
 .hidden {
