@@ -2,8 +2,7 @@ var product_container = document.getElementsByTagName("main")[0];
 var Create_Modal_Backdrop = document.getElementById("item_modal_backdrop");
 var Modal_Window = document.getElementById('item_modal_create');
 var Modal_Close = document.getElementById("modal_close_button")
-var handlebars = require('handlebars');
-var item_modal = handlebars.compile('item_modal');
+
 
 
 
