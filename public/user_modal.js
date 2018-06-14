@@ -9,10 +9,18 @@ var item_modal = handlebars.compile('item_modal');
 
 function Create_Modal(){
 	product_container.addEventListener("click", function(event){
+		memeURL = event.target.getElementsByClassName("")
+		name =
+		description =
+		price =
 
-
-		if(event.target.className === "product_image") {
-
+		if(event.target.className === "product_item") {
+				var context = {
+					memeURL: memeURL,
+					name: name,
+					description: description,
+					price: price
+				}
 			// for(var i =0; i <= Create_Modal_Backdrop.length; i++){
 				console.log("1+1");
 				Create_Modal_Backdrop.classList.remove('hidden');
