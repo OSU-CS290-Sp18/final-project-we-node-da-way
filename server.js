@@ -140,6 +140,7 @@ app.get('/Thanks', function(req, res, next){
 			CardNum: req.body.cardNum,
 			Expiration: req.body.expire
 		}, function(err, result) {
+			console.log(req.body.state);
 			if(err){
 				res.status(500).send("Error sending your order");
 			} else {
