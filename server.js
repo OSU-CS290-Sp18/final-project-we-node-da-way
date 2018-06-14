@@ -116,7 +116,7 @@ app.get('/:memeName/:memeURL/:memeDesc/:memePrice', function(req, res, next) {
 		memeName: req.params.memeName,
 		memeURL: "/" + req.params.memeURL,
 		price: req.params.memePrice,
-		description: req.param.memeDesc,
+		description: req.params.memeDesc,
 		quantity: 1
 	};
 	console.log(req.params.memeName);
@@ -164,11 +164,13 @@ app.post('/addCart', function(req, res, next){
 
 });
 
-app.post('/cart/removeFromCart', function(req, res, next){
+app.get('/cart/removeFromCart/:name', function(req, res, next){
 	var cart = mongoDB.collection('cart');
-	cart.removeOne({name: req.body.name}, function(err){
+	cart.removeOne({memeName: req.params.name}, function(err){
 		if (err) {
 			alert("Something happened with MongoDB. Can not remove meme from cart");
+		} else {
+			res.redirect('/cart');
 		}
 	});
 })
