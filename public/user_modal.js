@@ -5,7 +5,6 @@ var Modal_Close = document.getElementById("modal_close_button")
 
 
 
-
 function Create_Modal(){
 	product_container.addEventListener("click", function(event){
 
