@@ -426,6 +426,7 @@ main p {
 	background-color: rgb(111, 124, 145);
     color: white;
     margin: auto;
+	margin-top: 25px;
     position: relative;
 	
 	border: none;
