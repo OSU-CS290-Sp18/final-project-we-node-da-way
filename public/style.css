@@ -1,3 +1,10 @@
+button:hover{
+
+    cursor: pointer;
+    opacity: 0.75;
+
+}
+
 img {
 
 	max-width: 100%;
@@ -166,16 +173,6 @@ nav {
 	color: white;
 
 }
-
-#search_button:hover {
-
-	cursor: pointer;
-
-	opacity: 0.75;
-
-}
-
-
 
 #search_button:focus {
 
@@ -404,8 +401,35 @@ main p {
 	padding-right: 25px;
 }
 
+.cart_container a {
+	
+	display: block;
+	
+	margin: auto;
+	margin-top: 50px;
+	padding: 0;
+	
+}
 
-.checkout_container{
+.cart_button {
+	
+	background-color: rgb(111, 124, 145);
+    color: white;
+    margin: auto;
+    position: relative;
+	
+	border: none;
+	border-radius: 5px;
+	
+	font-size: 10pt;
+	font-weight: bold;
+	
+	padding: 5px;
+	
+}
+
+
+.checkout_container {
 
     display: flex;
     position: absolute;
@@ -416,7 +440,7 @@ main p {
 
 }
 
-.Payment_Method{
+.Payment_Method {
 
     flex-direction: row;
     position: absolute;
@@ -424,7 +448,7 @@ main p {
 
 }
 
-.Billing{
+.Billing {
 
     position: absolute;
     flex-direction: row;
@@ -441,7 +465,7 @@ main p {
 
 }
 
-.checkout_button{
+.checkout_button {
 
     background-color: rgb(111, 124, 145);
     color: white;
@@ -450,21 +474,14 @@ main p {
 
 }
 
-.cart_button{
-	background-color: rgb(111, 124, 145);
-    color: white;
-    margin: auto;
-    position: relative;
-    left:50%;
-	border-radius: 5px;
-}
 
-button:hover{
 
-    cursor: pointer;
-    opacity: 0.75;
 
-}
+
+
+
+
+
 
 input{
 
@@ -550,6 +567,7 @@ input{
 	position: absolute;
 	right: 0;
 }
+
 
 .hidden {
 
