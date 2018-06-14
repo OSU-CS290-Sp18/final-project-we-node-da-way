@@ -1,21 +1,21 @@
 <main class = "cart_container">
 
 	<ul class = "cart_headers">
-		
+
 		<li class = "big_header">Your Cart</li>
 		<li class = "filler_header"></li>
 		<li class = "small_header">Price</li>
 		<li class = "small_header">Quantity</li>
-			
+
 	</ul>
 
 	{{#each cart_items}}
-	
+
 		{{> cart_item}}
-		
+
 	{{/each}}
 
 	<a href = "/checkout"><button type = "button" class = "checkout_button">Continue</button></a>
 	
+
 </main>
-    
