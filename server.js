@@ -115,7 +115,7 @@ app.post('/addCart', function(req, res, next){
 
 });
 
-app.post('/removefromCart', function(req, res, next){
+app.post('/removeFromCart', function(req, res, next){
 	var cart = mongoDB.collection('cart');
 	cart.remove({name: req.body.name}, function(err){
 		if (err) {
