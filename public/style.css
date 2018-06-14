@@ -219,6 +219,8 @@ main p {
 }
 
 
+
+
 .product_item {
 
 	display: block;
@@ -416,13 +418,22 @@ main p {
 
 }
 
-button{
+.checkout_button{
 	
     background-color: rgb(111, 124, 145);
     color: white;
     width: 100%;
 	border-radius: 5px;
 	
+}
+
+.cart_button{
+	background-color: rgb(111, 124, 145);
+    color: white;
+    margin: auto;
+    position: relative;
+    left:50%;
+	border-radius: 5px;
 }
 
 button:hover{
@@ -451,6 +462,51 @@ input{
 	
 }
 
+
+#item_modal_backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#item_modal_create {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9010;
+  overflow: scroll;
+}
+
+
+.modal_dialog {
+  width: auto;
+  width: 550px;
+  height: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px
+}
+
+.modal_header{
+	position: relative;
+}
+
+#modal_close_button {
+  position: absolute;
+  right: -3px;
+  top: -17px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
 .foot{
 	
     display: inline-block;
