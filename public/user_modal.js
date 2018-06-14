@@ -4,21 +4,31 @@ var Modal_Window = document.getElementById('item_modal_create');
 var Modal_Close = document.getElementById("modal_close_button")
 
 
+function item_click(element){
+	var imageURL = element.src;
+	console.log(imageURL);
+	Create_Modal_Backdrop.classList.remove('hidden');
+	Modal_Window.classList.remove('hidden');
+}
 
-function Create_Modal(){
-	product_container.addEventListener("click", function(event){
 
 
 		if(event.target.className === "product_item") {
 
-			// for(var i =0; i <= Create_Modal_Backdrop.length; i++){
-				console.log("1+1");
-				Create_Modal_Backdrop.classList.remove('hidden');
-				Modal_Window.classList.remove('hidden');
-			// }
-		}
-	});
-}
+// function Create_Modal(){
+// 	product_container.addEventListener("click", function(event){
+
+
+// 		if(event.target.className === "product_image") {
+
+// 				var path = this.item_image.src;
+// 				alert(this.item_image.name);
+// 				Create_Modal_Backdrop.classList.remove('hidden');
+// 				Modal_Window.classList.remove('hidden');
+
+// 		}
+// 	});
+// }
 
 
 
@@ -33,5 +43,6 @@ function Close_Modal(){
 
 
 
-Create_Modal();
+// Create_Modal();
+// item_click(element);
 Close_Modal();
