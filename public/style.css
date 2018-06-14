@@ -111,13 +111,7 @@ nav {
 #nav_search {
 
 	width: 31.25vw;
-<<<<<<< HEAD
 	
-=======
-
-
-
->>>>>>> 0499d140226eed54f189fffaa25c4730996dab21
 	margin: 15px 0;
 	padding-right: 0;
 
@@ -280,9 +274,6 @@ main p {
 }
 
 
-/* Stuff for the cart page*/
-<<<<<<< HEAD
-
 .cart_container{
 	
 	flex-direction: column;
@@ -306,19 +297,10 @@ main p {
 	
 }
 
-<<<<<<< HEAD
 .cart_headers li {
 	
 	display: inline-block;
-	
-=======
-.price{
-    display: flex;
-    justify-content: space-around;
-    margin: 10em;
 
-
->>>>>>> 0499d140226eed54f189fffaa25c4730996dab21
 }
 
 .big_header {
@@ -398,38 +380,19 @@ main p {
 }
 
 
-.footbar {
-	
-	width: 100%;
-	
-    position: fixed;
-    left: 0;
-    bottom: 0;
-
-    background-color: rgb(111, 124, 145);
-	
-	text-align: center;
-}
-
-.foot{
-	
-    display: inline-block;
-	
-    margin-left: 3em;
-    margin-right: 3em;
-
-}
-	
 .checkout_container{
+	
     display: flex;
     position: absolute;
     flex-direction: column;
     align-content: center;
     align-items: center;
     top: 5em;
+	
 }
 
 .Payment_Method{
+	
     flex-direction: row;
     position: absolute;
     left: 10em;
@@ -437,60 +400,74 @@ main p {
 }
 
 .Billing{
+	
     position: absolute;
     flex-direction: row;
     right: 10em;
+	
 
 }
 
 .Buttons{
+	
     position: absolute;
     top: 30em;
+	
 
 }
 
 button{
+	
     background-color: rgb(111, 124, 145);
     color: white;
     width: 100%;
-    	border-radius: 5px;
-
-
-
+	border-radius: 5px;
+	
 }
 
 button:hover{
+	
     cursor: pointer;
     opacity: 0.75;
+	
 }
-
 
 input{
 
 	border: 1px solid white;
 	border-radius: 5px;
 
-	}
+}
+
 
 .footbar {
+	
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     background-color: rgb(111, 124, 145);
+	
 }
 
 .foot{
+	
     display: inline-block;
     margin-left: 3em;
     margin-right: 3em;
+	
 }
 
+
 .hidden {
+	
 	display: none;
+	
 }
 
 .always_hidden {
+	
 	display: none;
+	
 }
