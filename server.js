@@ -84,6 +84,10 @@ app.get('/cart', function(req, res, next){
 	});
 });
 
+app.get('/checkout', function(req, res, next){
+	res.status(200).render('checkout');
+})
+
 app.post('/addCart', function(req, res, next){
 	var meme = {
 		memeName: req.body.memeName,
