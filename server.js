@@ -72,7 +72,7 @@ app.get('/index', function(req, res, next) {
 	})
 });
 
-app.get('/search-`:keyword', function(req, res, next){
+app.get('/search-:keyword', function(req, res, next){
 
 	var memes = mongoDB.collection('memes');
 
