@@ -42,6 +42,7 @@ Add: function handleAddToCart(event) {
 	request.addEventListener('load', function(event) {
 		if(event.target.status === 200){
 			console.log("Go Beavs");
+			
 		} else {
 			console.log("(╯°□°)╯︵ ┻━┻");
 		}
