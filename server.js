@@ -129,7 +129,7 @@ app.get('/Thanks', function(req, res, next){
 	order.insertOne(
 
 		{	firstName: req.body.firstname,
-			lastName: req.body.lastName,
+			lastName: req.body.lastname,
 			Address: req.body.address,
 			Country: req.body.country,
 			State: req.body.state,
