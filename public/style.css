@@ -466,7 +466,7 @@ input{
 }
 
 
-#item_modal_backdrop {
+.item_modal_backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -476,7 +476,7 @@ input{
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-#item_modal_create {
+.item_modal_create {
   position: fixed;
   top: 0;
   left: 0;
@@ -500,7 +500,7 @@ input{
 	position: relative;
 }
 
-#modal_close_button {
+.modal_close_button {
   position: absolute;
   right: -3px;
   top: -17px;
@@ -518,6 +518,10 @@ input{
 	
 }
 
+.item_image{
+	width:100px;
+	height: :100px;
+}
 
 .hidden {
 	

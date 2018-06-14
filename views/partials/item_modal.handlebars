@@ -1,27 +1,29 @@
-<div id="item_modal_backdrop" class="hidden"></div>
-    <div id="item_modal_create" class="hidden">
-      <div class="modal_dialog">
+<div id="{{memeURL}}" class="item_modal_backdrop hidden"></div>
+    
+    <div id="hi{{memeURL}}" class="item_modal_create hidden">
+        <div class="modal_dialog">
 
-        <div class="modal_header">
-          <h4>{{name}}</h4>
-          <button type="button" id="modal_close_button">x</button>
-        </div>
-
-        <div class="modal_body">
-          <div class="item_image_input">
-            <img class = "item_image" src = {{memeURL}}>
+          <div class="modal_header">
+            <h4>{{name}}</h4>
+            <button type="button" id="bye{{memeURL}}" class="modal_close_button">x</button>
           </div>
 
-          <div class="item_image_description">
-            <p>{{description}}</p>
-            <p><b>${{price}}</b></p>
+          <div class="modal_body">
+            <div class="item_image_input">
+              <img class = "item_image" src = {{memeURL}}>
+            </div>
+
+            <div class="item_image_description">
+              <p>{{description}}</p>
+              <p><b>${{price}}</b></p>
+            </div>
           </div>
-        </div>
 
-        <div class="modal_add_item">
-          <button type="button" class="modal_add_item_button">Add Item</button>
-        </div>
+          <div class="modal_add_item">
+            <button type="button" class="modal_add_item_button">Add Item</button>
+          </div>
 
-      </div>
-  </div>
+       </div>
+
+
 </div>
