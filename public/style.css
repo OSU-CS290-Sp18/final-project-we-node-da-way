@@ -111,7 +111,7 @@ nav {
 #nav_search {
 
 	width: 31.25vw;
-	
+
 	margin: 15px 0;
 	padding-right: 0;
 
@@ -174,7 +174,7 @@ nav {
 	opacity: 0.75;
 
 }
-	
+
 
 
 #search_button:focus {
@@ -226,7 +226,7 @@ main p {
 	display: block;
 	height: 12.5vw;
 	width: 12.5vw;
-	
+
 	min-height: 200px;
 	min-width: 200px;
 
@@ -252,6 +252,7 @@ main p {
 .product_image:hover {
 
 	opacity: 0.75;
+	cursor: pointer;
 
 }
 
@@ -280,124 +281,124 @@ main p {
 
 
 .cart_container{
-	
+
 	flex-direction: column;
 	flex-wrap: nowrap;
 
 }
 
 .cart_headers {
-	
+
 	display: flex;
 	align-items: center;
-	
+
 	height: 45px;
-	
+
 	list-style-type: none;
-	
+
 	margin: auto;
 	margin-bottom: 1em;
-	
+
 	padding: 0;
-	
+
 }
 
 .cart_headers li {
-	
+
 	display: inline-block;
 
 }
 
 .big_header {
-	
+
 	width: 120px;
-	
+
 	font-size: 20pt;
-	
+
 	padding: 0 25px;
-	
-} 
+
+}
 
 .filler_header {
-	
+
 	width: 30vw;
 
 	padding-right: 25px;
-	
-} 
+
+}
 
 .small_header {
-	
+
 	width: 7.8125vw;
-	
+
 	font-size: 15pt;
-	
+
 	padding-right: 25px;
-	
-} 
+
+}
 
 .cart_item {
-	
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
-	
+
 	height: 150px;
 
 	position: relative;
-	
+
 	border: 1px solid;
 	border-color: rgb(200, 200, 200);
 	border-radius: 25px;
-	
+
 	margin: auto;
 	margin-bottom: 10px;
-	
+
 }
 
 .cart_item_image {
-	
+
 	display: block;
 	height: 120px;
 	width: 120px;
-	
+
 	margin: 0 25px;
 }
 
 .item_info {
-	
+
 	display: block;
 	width: 30vw;
-	
+
 	padding-right: 25px;
-	
+
 }
 
 .item_price, .item_quantity {
-	
+
 	display: block;
 	width: 7.8125vw;
-	
+
 	position: relative;
-	
+
 	padding-right: 25px;
 }
 
 
 .checkout_container{
-	
+
     display: flex;
     position: absolute;
     flex-direction: column;
     align-content: center;
     align-items: center;
     top: 5em;
-	
+
 }
 
 .Payment_Method{
-	
+
     flex-direction: row;
     position: absolute;
     left: 10em;
@@ -405,29 +406,29 @@ main p {
 }
 
 .Billing{
-	
+
     position: absolute;
     flex-direction: row;
     right: 10em;
-	
+
 
 }
 
 .Buttons{
-	
+
     position: absolute;
     top: 30em;
-	
+
 
 }
 
 .checkout_button{
-	
+
     background-color: rgb(111, 124, 145);
     color: white;
     width: 100%;
 	border-radius: 5px;
-	
+
 }
 
 .cart_button{
@@ -440,10 +441,10 @@ main p {
 }
 
 button:hover{
-	
+
     cursor: pointer;
     opacity: 0.75;
-	
+
 }
 
 input{
@@ -455,14 +456,14 @@ input{
 
 
 .footbar {
-	
+
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
     background-color: rgb(111, 124, 145);
-	
+
 }
 
 
@@ -511,22 +512,22 @@ input{
   cursor: pointer;
 }
 .foot{
-	
+
     display: inline-block;
     margin-left: 3em;
     margin-right: 3em;
-	
+
 }
 
 
 .hidden {
-	
+
 	display: none;
-	
+
 }
 
 .always_hidden {
-	
+
 	display: none;
-	
+
 }

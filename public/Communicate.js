@@ -1,4 +1,6 @@
-function handleRemoveFromCart(event) {
+module.exports = {
+
+Remove: function handleRemoveFromCart(event) {
 	var memeName = event.target.getElementById('item_name');
 	var url = "/cart/removeFromCart";
 
@@ -21,7 +23,7 @@ function handleRemoveFromCart(event) {
 	request.send(requestBody);
 }
 
-function handleAddToCart(event) {
+Add: function handleAddToCart(event) {
 	var memeName = event.target.getElementsByClassName('meme_name')[0];
 	var memeURL = event.target.getElementsByClassName("product_image")[0].getAttribute("src");
 	var description = event.target.getElementsByClassName('description')[0];
@@ -49,7 +51,7 @@ function handleAddToCart(event) {
 	request.send(requestBody);
 }
 
-function handleCheckout(event) {
+Checkout: function handleCheckout(event) {
 	var firstName = document.getElementsByClassName('Billing').getElementsByTagName('input')[0];
 	var lastName = document.getElementsByClassName('Billing').getElementsByTagName('input')[1];
 	var Address = document.getElementsByClassName('Billing').getElementsByTagName('input')[2];
@@ -83,4 +85,6 @@ function handleCheckout(event) {
 			console.log("(╯°□°)╯︵ ┻━┻");
 		}
 	});
+}
+
 }
