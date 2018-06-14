@@ -118,7 +118,7 @@ nav {
 #nav_search {
 
 	width: 31.25vw;
-
+	
 	margin: 15px 0;
 	padding-right: 0;
 
@@ -137,6 +137,9 @@ nav {
 #search_box {
 
 	width: 75%;
+	
+	position: relative;
+	bottom: 1px;
 
 	border: 1px solid white;
 	border-radius: 5px;
@@ -373,6 +376,23 @@ main p {
 
 }
 
+.cart_item a {
+	
+	display: block;
+	height: 100%;
+	width: 100%;
+	
+	margin: 0;
+	padding: 0;
+	
+}
+
+.cart_container a {
+	
+	margin: auto;
+	
+}
+
 .cart_item_image {
 
 	display: block;
@@ -399,16 +419,6 @@ main p {
 	position: relative;
 
 	padding-right: 25px;
-}
-
-.cart_container a {
-	
-	display: block;
-	
-	margin: auto;
-	margin-top: 50px;
-	padding: 0;
-	
 }
 
 .cart_button {
