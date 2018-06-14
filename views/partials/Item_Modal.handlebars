@@ -1,27 +1,25 @@
-<div id="item-modal-backdrop" class="hidden"></div>
-    <div id="item-modal-create" class="hidden">
-      <div class="modal-dialog">
+<div id="item_modal_backdrop" class="hidden"></div>
+    <div id="item_modal_create" class="hidden">
+      <div class="modal_dialog">
 
-        <div class="modal-image">
-          <h4>Product Name</h4>
-          <button type="button" class="modal-close-button">&times;</button>
+        <div class="modal_header">
+          <h4>{{name}}</h4>
+          <button type="button" id="modal_close_button">&times;</button>
         </div>
 
-        <div class="modal-body">
-          <div class="item-image-input">
+        <div class="modal_body">
+          <div class="item_image_input">
             <img class = "item_image" src = {{memeURL}}>
           </div>
 
-          <div class="item-image-description">
-            <p>Product description</p>
+          <div class="item_image_description">
+            <p>{{description}}</p>
             <p><b>${{price}}</b></p>
           </div>
         </div>
 
-        <div class="modal-remove-item">
-          <button type="button" class="modal-remove-item-button">Remove Item</button>
+        <div class="modal_remove_item">
+          <button type="button" class="modal_remove_item_button">Remove Item</button>
         </div>
 
       </div>
-  	</div>
-</div>
