@@ -1,6 +1,8 @@
 var product_container = document.getElementsByTagName("main")[0];
 var Create_Modal_Backdrop = document.getElementById("item_modal_backdrop");
 var Modal_Window = document.getElementById('item_modal_create');
+var Modal_Close = document.getElementById("modal_close_button")
+
 
 
 
@@ -21,6 +23,16 @@ function Create_Modal(){
 
 
 
+function Close_Modal(){
+	Modal_Close.addEventListener("click", function(){
+		Modal_Window.classList.add("hidden");
+		Create_Modal_Backdrop.classList.add('hidden');
+	});
+}
+
+
+
 
 
 Create_Modal();
+Close_Modal();
