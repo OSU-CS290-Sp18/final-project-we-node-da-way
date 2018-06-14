@@ -43,7 +43,6 @@ app.get('/', function(req, res, next) {
 		if (err) {
 			res.status(500).send("Error fetching memes");
 		} else {
-			console.log(memeDoc[0]);
 			res.status(200);
 			res.render('index', {
 
