@@ -84,6 +84,10 @@ app.get('/cart', function(req, res, next){
 	});
 });
 
+app.get('/checkout', function(req, res, next){
+	res.status(200).render('checkout');
+})
+
 app.post('/addCart', function(req, res, next){
 	var meme = {
 		memeName: req.body.memeName,
@@ -120,7 +124,7 @@ app.post('/removeFromCart', function(req, res, next){
 	});
 })
 
-app.get('/checkout/checkingout', function(req, res, next){
+app.get('/Thanks', function(req, res, next){
 	var order = mongoDB.collection('order');
 	var cart = mongoDB.collection('cart');
 	order.insertOne(
