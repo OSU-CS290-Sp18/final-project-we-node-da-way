@@ -550,3 +550,16 @@ input{
 	display: none;
 
 }
+
+.alert {
+	display: inline-block;
+	justify-content: center;
+	background-color: rgb(255, 252, 107);
+	border: 2px;
+	border-color: rgb(255, 250, 0);
+}
+
+#alert_close {
+	position: absolute;
+	right: 0;
+}
